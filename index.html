@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Loan & Rental Visualization</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Real Estate Loan & Rental Analyzer</h1>
+        
+        <section class="form-section">
+            <h2>Investment Details</h2>
+            <form id="loanForm">
+                <div class="form-group">
+                    <label for="price">Property Price (₹)</label>
+                    <input type="number" id="price" name="price" placeholder="e.g., 28500000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="downPayment">Down Payment (₹)</label>
+                    <input type="number" id="downPayment" name="downPayment" placeholder="e.g., 2850000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="interestRate">Annual Interest Rate (%)</label>
+                    <input type="number" id="interestRate" name="interestRate" step="0.01" placeholder="e.g., 8.5" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="loanTenure">Loan Tenure (Years)</label>
+                    <input type="number" id="loanTenure" name="loanTenure" placeholder="e.g., 20" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="monthlyRent">Current Monthly Rental Income (₹)</label>
+                    <input type="number" id="monthlyRent" name="monthlyRent" placeholder="e.g., 150000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="rentEscalation">Rent Escalation Per Year (%)</label>
+                    <input type="number" id="rentEscalation" name="rentEscalation" step="0.01" placeholder="e.g., 5" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="propertyTax">Annual Property Tax (₹)</label>
+                    <input type="number" id="propertyTax" name="propertyTax" placeholder="e.g., 50000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="propertyAppreciation">Annual Property Appreciation (%)</label>
+                    <input type="number" id="propertyAppreciation" name="propertyAppreciation" step="0.01" placeholder="e.g., 5" required>
+                </div>
+
+                <button type="submit" class="btn-calculate">Calculate & Visualize</button>
+            </form>
+
+            <div id="errorMessage" class="error-message"></div>
+            <div id="summaryStats" class="summary-stats"></div>
+        </section>
+
+        <section class="charts-section">
+            <div class="chart-container">
+                <h2>Loan & Payments Overview</h2>
+                <canvas id="loanChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h2>Rental Income vs Interest Paid (Yearly)</h2>
+                <canvas id="rentalVsInterestChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h2>Rental Income vs EMI Paid (Yearly)</h2>
+                <canvas id="rentalVsEMIChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h2>Rental Yield vs Property Value (Yearly)</h2>
+                <canvas id="rentalYieldChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h2>Net Position (Cumulative Rent - EMI)</h2>
+                <canvas id="netPositionChart"></canvas>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
