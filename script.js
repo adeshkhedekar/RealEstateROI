@@ -915,12 +915,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('loanForm').addEventListener('submit', handleFormSubmit);
 
     // Pre-fill with example values for demonstration
-    document.getElementById('price').value = 31500000;
-    document.getElementById('downPayment').value = 3000000;
-    document.getElementById('interestRate').value = 8.5;
+    document.getElementById('price').value = 31200000;
+    document.getElementById('downPayment').value = 5000000;
+    document.getElementById('interestRate').value = 8.25;
     document.getElementById('monthlyRent').value = 170000;
     document.getElementById('rentEscalation').value = 5;
-    document.getElementById('loanTenure').value = 15;
+    document.getElementById('loanTenure').value = 20;
     document.getElementById('propertyTax').value = 95000;
     document.getElementById('propertyAppreciation').value = 6;
 });
